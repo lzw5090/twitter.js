@@ -1,0 +1,22 @@
+{
+  "name": "twitter-js",
+  "version": "1.0.0",
+  "description": "a cool tweet app",
+  "main": "twitter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lzw5090/twitter.js.git"
+  },
+  "author": "Li && Asmaa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lzw5090/twitter.js/issues"
+  },
+  "homepage": "https://github.com/lzw5090/twitter.js#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
