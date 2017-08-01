@@ -1,7 +1,6 @@
 const _ = require('lodash');
 var data = [];//a bunch of objects(tweets)
 
-var data = ['hello', 'hi', 'bye', 'what'];
 function add (name, content) {
   data.push({ name: name, content: content });
 }
