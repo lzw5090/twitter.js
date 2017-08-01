@@ -1,9 +1,9 @@
-// const express = require('express')
-const app = require("express")();
+const express = require('express')
+const app = express();
 const volleyball = require('volleyball');
 app.use(volleyball);
 const nunjucks = require("nunjucks");
-const tweetBanks = require("./tweetBank")
+//const tweetBanks = require("./tweetBank")
 const routes = require('./routes');
 
 // var locals = {
@@ -29,6 +29,7 @@ app.use('/', function (req, res, next) {
 })
 
 app.use('/', routes); //"here, use this box full of routes that we made in a separate file."
+app.use(express.static('public'));
 
 // app.use('/special', function(req, res, next){
 //   console.log('You reached the special area');

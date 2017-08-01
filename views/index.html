@@ -15,6 +15,8 @@
 
      <!-- display tweets here -->
      {% for tweet in tweets %}
+     <img src = "https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg" >
+       <p>{{tweet.name}}</p>
        <li>{{tweet.content}}</li>
      {% endfor %}
 
