@@ -3,6 +3,7 @@ const app = require("express")();
 const volleyball = require('volleyball');
 app.use(volleyball);
 const nunjucks = require("nunjucks");
+const tweetBanks = require("./tweetBanks")
 
 // var locals = {
 //     title: 'An Example',

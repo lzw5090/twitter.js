@@ -19,6 +19,7 @@
   "homepage": "https://github.com/lzw5090/twitter.js#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "lodash": "^4.17.4",
     "volleyball": "^1.4.1"
   }
 }
