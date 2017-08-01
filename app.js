@@ -2,6 +2,24 @@
 const app = require("express")();
 const volleyball = require('volleyball');
 app.use(volleyball);
+const nunjucks = require("nunjucks");
+
+// var locals = {
+//     title: 'An Example',
+//     people: [
+//         { name: 'Gandalf'},
+//         { name: 'Frodo' },
+//         { name: 'Hermione'}
+//     ]
+// };
+
+// nunjucks.configure('views', {noCache: true});
+// nunjucks.render('index.html', locals, function (err, output) {
+//     console.log(output);
+// });
+app.set('view engine', 'html');
+app.engine('html', nunjucks.render);
+nunjucks.configure('views', {noCache: true});
 
 app.use('/', function (req, res, next) {
     // do your logging here
@@ -21,7 +39,9 @@ app.get('/', function (req, res) {
 })
 
 app.get('/news', function(req, res){
-  res.send('This is the news page!');
+  const people = [{name: 'Full'}, {name: 'Stacker'}, {name: 'Son'}];
+  res.render( 'index', {title: 'Hall of Fame', people: people} );
+  //res.send('This is the news page!');
 })
 
 app.get('/special', function(req, res, next){
